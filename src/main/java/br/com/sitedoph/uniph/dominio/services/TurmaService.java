@@ -1,0 +1,36 @@
+package br.com.sitedoph.uniph.dominio.services;
+
+import br.com.sitedoph.uniph.dominio.entidades.Turma;
+import br.com.sitedoph.uniph.dominio.repositorios.TurmaRepositorio;
+
+import javax.inject.Inject;
+import java.io.Serializable;
+import java.util.List;
+
+public class TurmaService implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+
+    @Inject
+    private TurmaRepositorio repo;
+
+    public Turma buscarPorId(Long id) {
+        return repo.buscarPorId(id);
+    }
+
+    public List<Turma> buscarTodos() {
+        return repo.buscarTodos();
+    }
+
+    public void excluir(Turma turma) {
+        repo.excluir(turma);
+    }
+
+    public Turma salvarOuAtualizar(Turma turma) {
+        return repo.salvarOuAtualizar(turma);
+    }
+
+    public List<Turma> filtrarPorPalavraChave(String filtro) {
+        return repo.filtrarPorPalavraChave(filtro);
+    }
+}

@@ -1,0 +1,71 @@
+/* TOGGLE */
+.uniph-toggle {
+    float: right;
+    line-height: 50px;
+    margin-right: 15px;
+
+    color: #fff;
+}
+
+/* MENU */
+.uniph-menu {
+    font-size: 1.1em;
+}
+
+.uniph-menu > ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.uniph-menu > ul a {
+    display: block;
+    padding: 10px 15px;
+
+    text-decoration: none;
+    font-weight: 500;
+    color: #373737;
+}
+
+.uniph-menu > ul i {
+    margin-right: 6px;
+}
+
+.uniph-menu > ul a:hover, .uniph-menu > ul a:focus {
+    background-color: #dfdfdf;
+}
+
+.uniph-menu > ul .is-selected {
+    border-left: 3px solid #1e94d2;
+    background-color: #f3f3f3;
+}
+
+.uniph-menu > ul .is-selected a {
+    margin-left: -3px;
+    color: #1e94d2;
+}
+
+/* PAGE-TITLE */
+.uniph-titulo-pagina {
+    margin: 0;
+    padding: 20px 0;
+
+    font-size: 1.5em;
+    color: #373737;
+}
+
+.ui-growl {
+    top: 60px;
+}
+
+.ui-editor {
+    width: 100%;
+    height: 250px;
+}
+
+.singleLine {
+    text-wrap: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

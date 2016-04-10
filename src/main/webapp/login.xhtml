@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+
+    <h:outputScript target="body" library="uniph"
+                    name="javascripts/primefaces-locale.js"/>
+
+</h:head>
+
+<h:body>
+
+    <div id="cabecalho">
+
+        <h:graphicImage id="logo-uniph"
+                        library="uniph" name="images/logo.png"/>
+
+
+    </div>
+
+    <div id="conteudo">
+
+        <h:form>
+
+            <p:growl id="growl" autoUpdate="true"/>
+            <p:messages id="message" autoUpdate="true"/>
+
+            <p:fieldset>
+
+                <p:panelGrid columns="2">
+
+                    <p:outputLabel value="Login:" for="login"/>
+                    <p:inputText id="login" required="true"
+                                 requiredMessage="Digite o seu login!"
+                                 value="#{loginBean.usuario.login}"/>
+
+                    <p:outputLabel value="Senha:" for="senha"/>
+                    <p:password id="senha" required="true"
+                                requiredMessage="Digite a sua senha!"
+                                value="#{loginBean.usuario.senha}"/>
+
+                    <p:commandButton value="Efetuar Login"
+                                     action="#{loginBean.efetuarLogin}"
+                                     ajax="false"/>
+
+                </p:panelGrid>
+
+            </p:fieldset>
+
+
+        </h:form>
+
+    </div>
+
+</h:body>
+
+</html>
